@@ -1,40 +1,48 @@
-import { findByLabelText } from "@testing-library/react";
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Header() {
   return (
     <Nav>
-      <Logo src="/images/logo.svg" />
+      <Logo src="/images/logo.svg" alt="logo" />
       <NavMenu>
         <a>
-          <img src="/images/home-icon.svg" />
-          <span>HOME</span>
-        </a>{" "}
+          <img src="/images/home-icon.svg" alt="logo" />
+          <span>
+            <Link to="/">HOME</Link>
+          </span>
+        </a>
         <a>
-          <img src="/images/search-icon.svg" />
+          <img src="/images/search-icon.svg" alt="logo" />
           <span>SEARCH</span>
-        </a>{" "}
+        </a>
         <a>
-          <img src="/images/watchlist-icon.svg" />
+          <img src="/images/watchlist-icon.svg" alt="logo" />
           <span>WATCHLIST</span>
-        </a>{" "}
+        </a>
         <a>
-          <img src="/images/original-icon.svg" />
+          <img src="/images/original-icon.svg" alt="logo" />
           <span>ORIGINALS</span>
         </a>
         <a>
-          <img src="/images/movie-icon.svg" />
+          <img src="/images/movie-icon.svg" alt="logo" />
           <span>MOVIES</span>
         </a>
         <a>
-          <img src="/images/series-icon.svg" />
+          <img src="/images/series-icon.svg" alt="logo" />
           <span>SERIES</span>
         </a>
       </NavMenu>
       <UserImg>
         <div>
-          <p>LOG-IN</p>
+          <img
+            src="https://us.123rf.com/450wm/mrswilkins/mrswilkins1705/mrswilkins170500005/mrswilkins170500005.jpg?ver=6"
+            alt=""
+          />
+        </div>
+        <div>
+          <Link to="/login">LOG-IN</Link>
         </div>
       </UserImg>
     </Nav>
@@ -101,11 +109,18 @@ const NavMenu = styled.div`
   }
 `;
 const UserImg = styled.div`
-  width: 100px;
-  height: 50px;
-  border: 1px solid white;
-  margin-top: 0.75em;
-  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
 
-  box-sizing: border-box;
+  img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
 `;

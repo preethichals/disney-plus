@@ -5,19 +5,19 @@ function Viewers() {
   return (
     <Container>
       <Wrap>
-        <img src="/images/viewers-marvel.png" />
+        <img src="/images/viewers-marvel.png" alt="viewer-pic" />
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-disney.png" />
+        <img src="/images/viewers-disney.png" alt="viewer-pic" />
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-national.png" />
+        <img src="/images/viewers-national.png" alt="viewer-pic" />
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-pixar.png" />
+        <img src="/images/viewers-pixar.png" alt="viewer-pic" />
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-starwars.png" />
+        <img src="/images/viewers-starwars.png" alt="viewer-pic" />
       </Wrap>
     </Container>
   );
@@ -26,11 +26,13 @@ function Viewers() {
 export default Viewers;
 
 const Container = styled.div`
+  box-sizing: border-box;
   margin-top: 2rem;
   padding: 30px 0;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 1rem;
 `;
 
 const Wrap = styled.div`

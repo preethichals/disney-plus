@@ -17,14 +17,14 @@ function ImageSlider() {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <img src="/images/slider-badag.jpg" />
+        <img alt="" src="/images/img.jpeg" />
       </Wrap>
 
       <Wrap>
-        <img src="/images/slider-scale.jpg" />
+        <img alt="" src="/images/banner-02.jpg" />
       </Wrap>
       <Wrap>
-        <img src="/images/slider-scales.jpg" />
+        <img alt="" src="/images/banner-03.jpg" />
       </Wrap>
     </Carousel>
   );
