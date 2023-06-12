@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <Detail /> */}
-        {/* <Login /> */}
+        {/* <Detail />
+        <Login /> */}
 
          <Routes>
           <Route path="/" element={<Home />}></Route>
